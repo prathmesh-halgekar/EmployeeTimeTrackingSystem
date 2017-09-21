@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script src="homeCtrl.js"></script>
+<body ng-app="timeTrack" ng-controller="homeCtrl">
+	<div>
+
+		<div>
+			<h1 align="center">Time Tracking for employees:</h1>
+			<br/><br/>
+			<h4>{{message}}</h4>
+			<h5 style="color:green;">{{notifications}}</h5>
+			<div id="projectId">
+			<span>Please select project to be worked on :</span> 
+			<select ng-model="selectedProject" ng-options="project for project in projects">
+			</select>
+			</div>
+			<div id="timeId"> 
+			<button id="punchIn" value="In Time" ng-disabled="punchedIn" ng-click="punchIn()">In Time</button>
+			<button id="punchOut" value="Out Time" ng-disabled="punchedOut" ng-click="punchOut()">Out Time</button>
+			<button id="breakStart" value="breakStart" ng-click="breakStart()">Start Break</button>
+			<button id="breakStop" value="breakStop" ng-click="breakStop()">Stop Break</button>
+			</div>
+		</div>
+
+	</div>
+
+</body>
+</html>

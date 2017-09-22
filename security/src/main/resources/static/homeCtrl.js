@@ -22,8 +22,7 @@ app.controller('homeCtrl', function($scope, $http) {
 	};
 	$scope.init();
 	
-	/*punchIn()
-	punchOut()
+	/*TODO:
 	breakStart()
 	breakStop()*/
 	
@@ -55,21 +54,5 @@ app.controller('homeCtrl', function($scope, $http) {
 	    }); 
 	   
 	};
-	/*$scope.init = function(){
-		var imageFile = document.getElementById('selectFile').files[0];
-		var formData = new FormData();
-		formData.append('imageFile',imageFile);
-		console.log("inside upload"+imageFile);
-		$http.post("http://localhost:8076/upload",formData,{
-			   transformRequest: angular.identity,
-			   headers: {'Content-Type': undefined}
-			})
-	    .then(function(response) {
-	        $scope.myWelcome = response.data;
-	        console.log("converted img : "+$scope.myWelcome);
-			console.log("in success");
-	    }); 
-	   
-	};*/
 	
 });

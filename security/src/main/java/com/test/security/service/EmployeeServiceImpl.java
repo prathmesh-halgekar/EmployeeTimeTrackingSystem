@@ -25,9 +25,10 @@ public class EmployeeServiceImpl implements EmployeeServiceI {
 	private static LocalTime breakStopTime = null;
 	
 	@Override
-	public String storeTime(String empId, String type) {
-		
-		Employee employee = employeeRepository.findOne(empId);
+	public String storeTime(String empName, String type) {
+		// Assuming name for simplicity.
+		Employee employee = employeeRepository.getEmployeeByEmployeeName(empName);
+	
 		DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
 		Date date = new Date();
 		LocalDateTime dateTime = LocalDateTime.now();

@@ -8,4 +8,5 @@ import com.test.security.model.Employee;
 
 public interface EmployeeRepository extends CrudRepository<Employee, String> {
 
+	public Employee getEmployeeByEmployeeName(String name);
 }

@@ -37,7 +37,8 @@ public class EmployeeController {
     public Map<String, Object> punchInTime(HttpSession httpSession, Principal principal) {
     	HashMap<String, Object> map = new HashMap<String, Object>();
     	String time ="";
-    	if((time=employeeService.storeTime("1", "inTime"))!=null){
+    	System.out.println("principal.getName() :"+principal.getName());
+    	if((time=employeeService.storeTime(principal.getName(), "inTime"))!=null){
     		map.put("message","Time stored successfully at : "+time);
     	}else{
     		map.put("message","Time not stored successfully");
@@ -49,7 +50,7 @@ public class EmployeeController {
     public Map<String, Object> punchOutTime(HttpSession httpSession, Principal principal) {
     	HashMap<String, Object> map = new HashMap<String, Object>();
     	String time ="";
-    	if( (time = employeeService.storeTime("1", "outTime"))!=null){
+    	if( (time = employeeService.storeTime(principal.getName(), "outTime"))!=null){
     		map.put("message","Time stored successfully at : "+time);
     	}else{
     		map.put("message","Time not stored successfully");

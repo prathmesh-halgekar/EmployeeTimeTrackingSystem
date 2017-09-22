@@ -9,7 +9,7 @@ Steps to run the application:
 
 Functionalities:
 1) Log in using ldap - spring security authentication.
-2) Employee check-in and check-out time to be stored in database.
+2) Employee check-in and check-out time recorded in database.
 
 Pending:
 1) Calculating employee break time.

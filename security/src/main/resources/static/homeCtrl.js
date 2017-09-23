@@ -14,6 +14,7 @@ app.controller('homeCtrl', function($scope, $http) {
 		$http.get("http://localhost:8080/welcomeData")
 	    .then(function(response) {
 	        $scope.message = response.data.message;
+	        $scope.projects = response.data.projects;
 			console.log("init : end");
 	    },function(error){
 	    	console.log(error);

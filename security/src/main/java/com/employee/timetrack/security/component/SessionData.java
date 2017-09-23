@@ -1,4 +1,4 @@
-package com.test.security.component;
+package com.employee.timetrack.security.component;
 
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;

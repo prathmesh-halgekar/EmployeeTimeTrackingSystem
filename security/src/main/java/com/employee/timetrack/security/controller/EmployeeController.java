@@ -1,4 +1,4 @@
-package com.test.security.controller;
+package com.employee.timetrack.security.controller;
 
 import java.security.Principal;
 import java.util.HashMap;
@@ -13,13 +13,16 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.test.security.service.EmployeeServiceI;
+import com.employee.timetrack.security.service.EmployeeServiceI;
+import com.employee.timetrack.security.service.ProjectServiceI;
 
 @RestController
 public class EmployeeController {
 	
 	@Autowired
 	private EmployeeServiceI employeeService;
+	@Autowired
+	private ProjectServiceI projectService;
 	
 	private static StringBuffer welcomeMessage = new StringBuffer("Welcome, You are now logged in : ");
 	
@@ -29,6 +32,7 @@ public class EmployeeController {
     public Map<String, Object> loginSuccess(HttpSession httpSession, Principal principal,Map<String, Object> model) {
 		HashMap<String, Object> map = new HashMap<String, Object>();
 	    map.put("message", welcomeMessage.append(principal.getName()));
+	    map.put("projects", projectService.getAllProjects());
 	    return map;        
     }
 	

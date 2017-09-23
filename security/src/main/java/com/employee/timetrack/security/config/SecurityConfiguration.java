@@ -1,4 +1,4 @@
-package com.test.security.config;
+package com.employee.timetrack.security.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

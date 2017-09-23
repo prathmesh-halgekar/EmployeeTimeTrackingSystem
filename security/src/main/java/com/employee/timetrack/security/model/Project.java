@@ -1,4 +1,4 @@
-package com.test.security.model;
+package com.employee.timetrack.security.model;
 
 import java.io.Serializable;
 
@@ -11,6 +11,11 @@ import javax.persistence.Table;
 @Table(name="Projects")
 public class Project  implements Serializable  {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	@Id
 	@Column(name = "project_Id")
 	private String projectId;

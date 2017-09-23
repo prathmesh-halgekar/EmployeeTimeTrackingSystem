@@ -1,4 +1,4 @@
-package com.test.security.model;
+package com.employee.timetrack.security.model;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
@@ -15,6 +15,11 @@ import javax.persistence.TemporalType;
 @Table(name="emps")
 public class Employee  implements Serializable {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	@Id
 	@Column(name = "emp_id")
 	private String employeeId;

@@ -1,8 +1,8 @@
-package com.test.security.service;
+package com.employee.timetrack.security.service;
 
 import javax.servlet.http.HttpSession;
 
-import com.test.security.model.Employee;
+import com.employee.timetrack.security.model.Employee;
 
 public interface EmployeeServiceI {
 

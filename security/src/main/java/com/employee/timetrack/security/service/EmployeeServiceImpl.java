@@ -1,4 +1,4 @@
-package com.test.security.service;
+package com.employee.timetrack.security.service;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -12,8 +12,8 @@ import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.test.security.model.Employee;
-import com.test.security.repository.EmployeeRepository;
+import com.employee.timetrack.security.model.Employee;
+import com.employee.timetrack.security.repository.EmployeeRepository;
 
 @Service("employeeService")
 public class EmployeeServiceImpl implements EmployeeServiceI {

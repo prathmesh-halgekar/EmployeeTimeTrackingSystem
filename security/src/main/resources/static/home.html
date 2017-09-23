@@ -16,7 +16,7 @@
 			<h5 style="color:green;">{{notifications}}</h5>
 			<div id="projectId">
 			<span>Please select project to be worked on :</span> 
-			<select ng-model="selectedProject" ng-options="project for project in projects">
+			<select ng-model="selectedProject" ng-options="project.projectName for project in projects">
 			</select>
 			</div>
 			<div id="timeId"> 
